@@ -202,11 +202,20 @@
     line-height: 1.6;
   }
 }
+.form-icon {
+  color: #888;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
 
+.form-icon:hover {
+  color: #0078d4;
+}
 
 
   </style>
 </head>
+
 
 <body ng-controller="NotebookListCtrl">
   <div id="notebooks">
@@ -242,13 +251,23 @@
         <li ng-repeat="notebook in notebooks | filter:query | orderBy: orderList">
           <div class="title-row">
             <strong>{{notebook.name}}</strong>
-            <span class="code">{{notebook.age}}</span>
+        
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="code">{{notebook.age}}</span>
+              <a 
+                ng-href="{{notebook.url}}" 
+                target="_blank" 
+                class="form-icon" 
+                title="Ver página do produto">
+                <i class="fas fa-file-alt"></i>
+              </a>
+            </div>
           </div>
           <p>{{notebook.procesor}}</p>
         </li>
+     
       </ul>
     </div>
-    
 
 
   <script>
@@ -259,40 +278,47 @@
         {
           name: " Antecipação  de Recebíveis (Duplicatas)",
           procesor: "É um serviço que permite à empresa receber agora o valor de vendas feitas a prazo. A Funcional antecipa esse dinheiro, sem precisar de empréstimo bancário, ajudando no fluxo de caixa e evitando atrasos nos pagamentos, com menos burocracia e custo menor.",
-          age: "SFN001"
+          age: "SFN001",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/Antecipa%C3%A7%C3%A3o-de-Receb%C3%ADveis-(Duplicatas).aspx"
         },
         {
           name: "Nota Comercial Estruturada (Captação Direta)",
-          procesor: "É um serviço que ajuda o cliente a investir ou proteger seu patrimônio fora do Brasil. A Funcional entende o que o cliente precisa, conecta com bancos ou gestoras internacionais confiáveis e acompanha todo o processo com segurança e apoio técnico.",
-          age: "SFN002"
+          procesor: "A Nota Comercial Estruturada é um instrumento financeiro que representa uma promessa de pagamento em dinheiro, em uma data futura, normalmente acompanhado de uma remuneração pré-estabelecida, como juros ou indexadores. Permite às empresas captar recursos diretamente no mercado, sem depender exclusivamente de empréstimos bancários, proporcionando maior flexibilidade e acesso a capital.",
+          age: "SFN002",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/Nota-Comercial-Estruturada-(Capta%C3%A7%C3%A3o-Direta).aspx"
         },
         {
           name: "Estruturação de CCB",
           procesor: "É um serviço que organiza empréstimos formais para empresas por meio da CCB, um documento reconhecido legalmente. A Funcional estrutura todo o processo junto ao banco, garantindo clareza nos valores, prazos e juros, com segurança jurídica para quem empresta e facilidade no acesso ao crédito para quem toma o recurso.",
-          age: "SFN003"
+          age: "SFN003",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/Estrutura%C3%A7%C3%A3o-de-CCB.aspx"
         },
         {
           name: "Operações com CPR",
           procesor: "É um serviço que ajuda o produtor rural a conseguir crédito usando sua produção futura como garantia. A Funcional estrutura a operação com segurança, permitindo que o produtor receba o dinheiro antes da colheita, sem precisar vender os produtos de imediato. Isso garante recursos para investir na lavoura e dá ao credor mais segurança no recebimento.",
-          age: "SFN004"
+          age: "SFN004",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/Opera%C3%A7%C3%B5es-com-CPR.aspx"
         },
 
         {
           name: "Debêntures Privadas para Financiamento Estruturado",
           procesor: "É um serviço que ajuda empresas a captar dinheiro direto com investidores, sem passar por banco. A Funcional estrutura a emissão de debêntures — títulos de dívida privada — que permitem financiar projetos ou expandir o negócio com mais liberdade, menos custo e retorno atrativo para quem investe.",
-          age: "SFN005"
+          age: "SFN005",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/Deb%C3%AAntures-Privadas-para-Financiamento-Estruturado.aspx"
         },
 
         {
           name: "Estruturação de Dívidas",
           procesor: "É um serviço que organiza ou renegocia as dívidas da empresa de forma estratégica. A Funcional monta o melhor plano para pagar com prazos, taxas e valores que caibam no fluxo de caixa. Quando necessário, renegocia com os credores para reduzir juros, alongar prazos e evitar inadimplência, ajudando a recuperar o equilíbrio financeiro e garantir a continuidade do negócio",
-          age: "SFN006"
+          age: "SFN006",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/Estrutura%C3%A7%C3%A3o-de-D%C3%ADvidas.aspx"
         },
         
         {
           name: "FIDIC (Estruturação de Operação Financeira)",
           procesor: "É um serviço que estrutura operações financeiras por meio de Fundos de Investimento em Direitos Creditórios (FIDIC). A Funcional monta a estratégia de captação, seleciona os ativos que vão compor o fundo e acompanha toda a operação, oferecendo uma alternativa segura e personalizada para empresas que buscam crédito com planejamento e controle.",
-          age: "SFN007"
+          age: "SFN007",
+          url:"https://funcionalx.sharepoint.com/sites/produtos/SitePages/Produtos%20FIN/FIDIC-(Estrutura%C3%A7%C3%A3o-de-Opera%C3%A7%C3%A3o-Financeira).aspx"
         }
 
 
